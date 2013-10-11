@@ -99,7 +99,8 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".CorporaUpdateReceiver">
+        <receiver android:name=".CorporaUpdateReceiver"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.search.action.SEARCHABLES_CHANGED" />
             </intent-filter>
@@ -109,7 +110,8 @@
         </receiver>
 
         <receiver android:name=".SearchWidgetProvider"
-                  android:label="@string/app_name">
+                  android:label="@string/app_name"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
